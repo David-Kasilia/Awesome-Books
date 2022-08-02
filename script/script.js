@@ -1,10 +1,9 @@
-let addButton = document.getElementById('button')
-let bookList = document.getElementById('bookList')
-let title = document.getElementById('title')
-let author = document.getElementById('author')
+const bookList = document.getElementById('bookList');
+const title = document.getElementById('title');
+const author = document.getElementById('author');
 const form = document.querySelector('form');
 
-let books = [];
+const books = [];
 
 function storeBooks() {
   localStorage.setItem('books', JSON.stringify(books));
@@ -12,8 +11,8 @@ function storeBooks() {
 
 function createBook(title, author) {
   const newBook = {
-    title: title,
-    author: author,
+    title,
+    author,
   };
   books.push(newBook);
 
@@ -21,9 +20,7 @@ function createBook(title, author) {
   books.forEach((book, index) => {
     singleBook.innerHTML = `
             <p>${book.title}</p>
-            <br>
             <p>${book.author}</p>
-            <br>
             <button id="remove">Remove</button>
             <hr>
         `;
@@ -50,7 +47,6 @@ form.addEventListener('submit', (e) => {
     author.value = '';
   }
 });
-
 
 function retrieveBooks() {
   const books = JSON.parse(localStorage.getItem('books'));
