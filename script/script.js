@@ -1,5 +1,27 @@
 /* eslint-disable consistent-return */
 /* eslint max-classes-per-file: ["error", 5] */
+
+function onNavItemClick(event) {
+  let activePage = document.querySelectorAll('.active')
+
+  for(var i = 0; i < activePage.length; i++){
+    activePage[i].className = activePage[i].className.replace('active', '')
+
+  }
+
+  // activePage.forEach(function(page){
+  //   page.className = page.className.replace('active', '')
+  // })
+
+  event.target.parentElement.className += ' active'
+  document.getElementById(event.target.href.split('#')[1]).className += ' active'
+
+}
+const nav = document.getElementById('nav-bar');
+
+nav.addEventListener('click', onNavItemClick, false);
+
+
 class BookList {
   constructor(title, author) {
     this.title = title;
@@ -47,7 +69,7 @@ class UI {
   }
 
   static addBookToList(book) {
-    const bookList = document.querySelector('#bookList');
+    const bookList = document.getElementById('bookList');
 
     const listContainer = document.createElement('div');
 
@@ -72,7 +94,7 @@ class UI {
 
 document.addEventListener('DOMContentLoaded', UI.displayBooks);
 
-document.querySelector('#bookForm').addEventListener('submit', (e) => {
+document.getElementById('bookForm').addEventListener('submit', (e) => {
   e.preventDefault();
 
   const title = document.getElementById('title').value;
@@ -90,7 +112,7 @@ document.querySelector('#bookForm').addEventListener('submit', (e) => {
   UI.clearFields();
 });
 
-document.querySelector('#bookList').addEventListener('click', (e) => {
+document.getElementById('bookList').addEventListener('click', (e) => {
   UI.deleteBook(e.target);
 
   StoreBooks.removeBook(e.target.parentElement.previousElementSibling.textContent);

@@ -10,6 +10,9 @@ body {
   font-family: 'Source Sans Pro', sans-serif;
 }
 
+.heading{
+  margin-left: 20px;
+}
 #bookList {
   border-style: solid;
   border-color: black;
@@ -71,4 +74,97 @@ hr {
   width: 50px;
   height: 30px;
   font-family: 'Source Sans Pro', sans-serif;
+}
+
+a{
+  text-decoration: none;
+}
+
+.nav-items{
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 30px;
+  margin-top: 40px;
+  margin-right: 90px;
+  font-weight: 900;
+  font-size: 18px;
+  font-family: 'Source Sans Pro', sans-serif;
+  text-align: center;
+  color: black;
+
+  
+}
+
+.nav-items .active a{
+  border-bottom: 1px solid blue;
+  &:hover {
+    border-color: transparent;
+    background: blue;
+    color: white;
+}
+}
+
+a:visited{
+  color: black;
+}
+
+.head-container{
+  display: flex;
+  justify-content: space-between;
+ 
+  border-style: solid;
+  border-color: black;
+  border-width: 2px;
+
+}
+
+.date{
+  float: right;
+  font-weight: 900;
+  font-size: 18px;
+  font-family: 'Source Sans Pro', sans-serif;
+
+}
+
+#content{
+  margin-top: 60px;
+}
+
+.list-title{
+  font-weight: 900;
+  font-size: 28px;
+  font-family: 'Source Sans Pro', sans-serif;
+  text-align: center;
+
+}
+
+footer{
+  margin-top: 50px;
+  border-style: solid;
+  border-color: black;
+  border-width: 2px;
+}
+
+.contact-head{
+  font-weight: 900;
+  font-size: 28px;
+  font-family: 'Source Sans Pro', sans-serif;
+  text-align: center;
+}
+
+.contText,
+.contact-list{
+  font-weight: 300;
+  font-size: 18px;
+  font-family: 'Open Sans', sans-serif;
+  margin-left: 350px;
+}
+
+.tab-pane { 
+  display: none;
+}
+
+.tab-pane.active { 
+  display: block; 
 }
