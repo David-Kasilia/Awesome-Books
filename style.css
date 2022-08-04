@@ -10,9 +10,10 @@ body {
   font-family: 'Source Sans Pro', sans-serif;
 }
 
-.heading{
+.heading {
   margin-left: 20px;
 }
+
 #bookList {
   border-style: solid;
   border-color: black;
@@ -76,11 +77,15 @@ hr {
   font-family: 'Source Sans Pro', sans-serif;
 }
 
-a{
+a {
   text-decoration: none;
 }
 
-.nav-items{
+a:visited {
+  color: black;
+}
+
+.nav-items {
   list-style: none;
   display: flex;
   justify-content: space-evenly;
@@ -92,61 +97,52 @@ a{
   font-family: 'Source Sans Pro', sans-serif;
   text-align: center;
   color: black;
-
-  
 }
 
-.nav-items .active a{
+.nav-items .active a {
   border-bottom: 1px solid blue;
+
   &:hover {
     border-color: transparent;
     background: blue;
     color: white;
-}
-}
-
-a:visited{
-  color: black;
+  }
 }
 
-.head-container{
+.head-container {
   display: flex;
   justify-content: space-between;
- 
   border-style: solid;
   border-color: black;
   border-width: 2px;
-
 }
 
-.date{
+.date {
   float: right;
   font-weight: 900;
   font-size: 18px;
   font-family: 'Source Sans Pro', sans-serif;
-
 }
 
-#content{
+#content {
   margin-top: 60px;
 }
 
-.list-title{
+.list-title {
   font-weight: 900;
   font-size: 28px;
   font-family: 'Source Sans Pro', sans-serif;
   text-align: center;
-
 }
 
-footer{
+footer {
   margin-top: 50px;
   border-style: solid;
   border-color: black;
   border-width: 2px;
 }
 
-.contact-head{
+.contact-head {
   font-weight: 900;
   font-size: 28px;
   font-family: 'Source Sans Pro', sans-serif;
@@ -154,17 +150,17 @@ footer{
 }
 
 .contText,
-.contact-list{
+.contact-list {
   font-weight: 300;
   font-size: 18px;
   font-family: 'Open Sans', sans-serif;
   margin-left: 350px;
 }
 
-.tab-pane { 
+.tab-pane {
   display: none;
 }
 
-.tab-pane.active { 
-  display: block; 
+.tab-pane.active {
+  display: block;
 }
